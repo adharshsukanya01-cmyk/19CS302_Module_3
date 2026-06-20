@@ -1,5 +1,5 @@
 
-# EX 15 C program that reads a one-dimensional array of integers and replaces all even elements with 'E'.
+# EX 15 C program to replace all odd elements by 'O' in one dimensional array
 ## AIM:
 To write a C program that reads a one-dimensional array of integers and replaces all even elements with 'E'.
 
@@ -13,26 +13,43 @@ To write a C program that reads a one-dimensional array of integers and replaces
 7. End. 
 ## Program:
 ```
-#include <stdio.h> 
-int main() { 
-    int arr[100], n; 
-    scanf("%d", &n); 
-    for (int i = 0; i < n; i++) { 
-        scanf("%d", &arr[i]); 
-    } 
-    for (int i = 0; i < n; i++) { 
-        if (arr[i] % 2 == 0) 
-            printf("E "); 
+#include<stdio.h>
+int main()
+{
+    int i,n;
+    scanf("%d",&n);
+    int a[10];
+    char re[n];
+    for(i=0; i<n; i++)
+    scanf("%d",&a[i]);
+    for(i=0; i<n; i++)
+    {
+        if(a[i]%2!=0)
+        {
+        re[i] = 'O';
+        }
         else 
-            printf("%d ", arr[i]); 
-    } 
-    printf("\n"); 
-    return 0; 
-} 
+        {
+         re[i] = a[i];
+        }
+    }
+        for(i=0; i<n; i++)
+        {
+            if(re[i] == 'O')
+            {
+            printf("O ");
+            }
+            else
+            {
+            printf("%d ",a[i]);
+            }
+        }
+    return 0;
+}
 ```
 
 ## Output:
-![image](https://github.com/user-attachments/assets/d9434684-1654-4723-a17b-cf3d030a32ea)
+<img width="1127" height="187" alt="Screenshot 2026-06-08 141244" src="https://github.com/user-attachments/assets/cb0b5969-c513-4e57-91b8-363ea02de775" />
 
 
 
